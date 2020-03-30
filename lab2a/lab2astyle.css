@@ -1,0 +1,374 @@
+/* Brianna Mcgovern Lab 1 COEN 163L *
+ * CSS lab2astyle.css */
+
+
+/* media screen greater than 700 px */
+
+body {
+    font-family: arial;
+}
+
+.main-container {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head-logo {
+    width: 20%;
+    margin-left: 5%;
+}
+
+#logo {
+    height: 70px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+#Button-01 {
+    visibility: hidden;
+    position: absolute;
+    margin-top: 15px;
+    margin-right: 15px;
+    right: 0px;
+}
+
+#Button-02 {
+    visibility: hidden;
+    margin-top: 15px;
+}
+
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  text-align: center;
+  justify: center;
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #d1de44 (green) on hover */
+.topnav a:hover {
+    color: #d1de44;
+}
+
+.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    text-align: left;
+    justify: center;
+}
+
+.sidenav a:hover {
+    color: #d1de44;
+}
+
+.sidenav a {
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-color: #ffffff;
+    text-align: left;
+    padding: 14px 16px;
+}
+
+#greyBox {
+    display: block;
+    text-align: center;
+    height: auto;
+    background-color: #aaaaaa;
+}
+
+#top {
+ margin-top: 30px;
+ margin-bottom: 30px;
+ width: 90%;
+ position: relative;
+ top: 10%;
+ border: 1px solid #ffffff;
+ }
+
+.left {
+    vertical-align: top;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 5%;
+    display: inline-block;
+    width: 25%;
+}
+
+#bottomleft {
+    width: 100%;
+}
+
+.mid {
+    vertical-align: top;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 3%;
+    display: inline-block;
+    width: 25%;
+}
+
+#bottomright {
+    width: 100%;
+}
+
+.right {
+    vertical-align: top;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 2%;
+    display: inline-block;
+    width: 34%;
+}
+
+#sidebar {
+    background-color: #eeeeee;
+    padding-top: 8px;
+}
+
+#sidebar h1 {
+    text-align: center;
+}
+
+#sidebar p {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 16px;
+}
+
+h1 {
+    margin: 14px 0px 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 24px;
+    overflow: hidden;
+    background-color: #000;
+    text-align: center;
+    justify: center;
+    font-size: 12px;
+    color: grey;
+
+}
+
+footer a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    color: grey;
+}
+
+.sidenav a {
+    display: none;
+}
+
+/* When the screen is less than 700 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+    /* Logo takes larger width of page */
+    .head-logo {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        margin-left: 5%;
+        width: 35%;
+    }
+    
+    /* Define style for button and initial location/size */
+    .head-button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        margin-left: 40%;
+        width: 15%;
+        text-align: right;
+    }
+    
+    /* Used in conjunction of side bar for flyout navigation */
+   #main {
+        position: relative;
+        right: 0;
+        transition: margin-right 0.5s;
+        padding: 0;
+    }
+    
+    /* on mobile, hide top nav bar */
+    .topnav a {
+        visibility: hidden;
+    }
+    
+    /* keep nav as thin line */
+    .topnav {
+        height: 5px;
+    }
+    
+    /* side navigation menu */
+    .sidenav {
+        /*display: block;*/
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        right: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* side navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+        color: #d1de44;
+    }
+    
+    /* show nav bar open button */
+    #Button-01 {
+        visibility: visible;
+        position: absolute;
+    }
+    
+    .header a {
+        float: right;
+        display: block;
+    }
+    
+    
+    /* position and style the close button (top right corner) */
+    #Button-02 {
+        position: absolute;
+        top: 0;
+        right: 250px;
+        /*font-size: 36px;
+        margin-left: 50px; */
+    }
+    
+    /* place picture before text and style for middle sections and lay them top
+     of each other in order */
+    .left {
+        vertical-align: top;
+        position: relative;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 5%;
+        display: inline-block;
+        width: 90%;
+        direction: rtl;
+    }
+    
+    .section-picture {
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .pic {
+        width: 50%;
+        display: inline-block;
+    }
+    
+    #bottomleft {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .section-par {
+        
+        float: left;
+        vertical-align: top;
+        position: relative;
+        display: inline-block;
+        margin-right: 5%;
+        width: 40%;
+        text-align: left;
+    }
+    
+    .section-par p {
+        text-align: left;
+    }
+    
+    .mid {
+        vertical-align: top;
+        margin-top: 0;
+        margin-bottom: 10px;
+        position: relative;
+        margin-left: 5%;
+        display: block;
+        width: 90%;
+        direction: rtl;
+    }
+    
+    #bottomright {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .right {
+        vertical-align: top;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        margin-left: 2%;
+        display: inline-block;
+        width: 100%;
+    }
+
+    
+    
+    
+    /* on mobile, hide footer links */
+    footer a,span {
+        display: none
+        
+    }
+    
+    #sidebar {
+        vertical-align: top;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        margin-left: 2%;
+        display: inline-block;
+        width: 90%;
+    }
+    
+
+    
+}

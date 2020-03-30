@@ -1,0 +1,163 @@
+<!-- Brianna Mcgovern Lab 2 Part 1 COEN 163L -->
+<!-- HTML lab2a.html -->
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" type="text/css" href="lab2astyle.css">
+    <title>Lab 1</title>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div class="main-container">
+                <div class="head-logo">
+                    <img id="logo" src="Logo.png" alt="Lab 1">
+                    <!--    <a href="javascript:void(0);" class="sidenav" onclick="openNav()"> -->
+                </div>
+                <div class="head-button">
+                    <img id="Button-01" onclick="openNav()" src="Button-01.png" alt="Nav Bar">
+                </div>
+            </div>
+        </header>
+        
+        <nav class="topnav" id="myTopNav">
+            <a class="toplink" href="#home">HOME</a>
+            <a class="toplink" href="#about">ABOUT</a>
+            <a class="toplink" href="#work">WORK</a>
+            <a class="toplink" href="#news">NEWS</a>
+            <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img id="Button-01" src="Button-01.png" alt="Nav Bar"> -->
+            <!--<i class="Button-01"></i>-->
+        </nav>
+    
+        <div class="main-container" id="greyBox">
+            <div class="topimg">
+                <img id="top" src="Photo-01.jpg" alt="Photo 1">
+            </div>
+        </div>
+        
+        <div class="main-container" id="main-section">
+            <div class="left">
+                <section class="section-picture">
+                    <div class="pic">
+                    <img id="bottomleft" class="bottpics" src="Photo-02.jpg" alt="Photo 2">
+                    </div>
+                    <div class="section-par">
+                        <h1>Title Head</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="mid">
+                <section class="section-picture">
+                    <div class="pic">
+                    <img id="bottomright" class="bottpics" src="Photo-03.jpg" alt="Photo 3">
+                    </div>
+                    <div class="section-par">
+                        <h1>Title Head</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="right">
+                <aside class="column" id="sidebar">
+                    <h1 align=center>Side Bar</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat, duis autem vel.Lorem ipsum dolor sit amet. </p>
+                    <p>Lorem ipsumonsectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat, duis autem.</p>
+                </aside>
+            </div>
+         </div>
+    
+        <footer>
+            <a href="#home">HOME</a>
+            <span> | </span>
+            <a href="#about">ABOUT</a>
+            <span> | </span>
+            <a href="#work">WORK</a>
+            <span> | </span>
+            <a href="#news">NEWS</a>
+        </footer>
+    </div>
+    
+    <div class="sidenavbar">
+        <img id="Button-02" onclick="closeNav()" src="Button-02.png" alt="Nav Bar">
+        <nav class="sidenav" id="mySideNav">
+        <!--   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+     
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#work">WORK</a>
+            <a href="#news">NEWS</a>
+        </nav>
+    </div>
+    
+    <script>
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySideNav").style.width = "250px";
+            
+            document.getElementById("Button-02").style.visibility = "visible";
+
+            
+            if (document.getElementById("Button-01").src == "Button-01.png")
+            {
+                document.getElementById("Button-01").style.right = "15px";
+
+                //document.getElementById("Button-01").src = "Button-02.png";
+                
+                document.getElementById("mySideNav").style.visibility = "hidden";
+            }
+            else
+            {
+                //document.getElementById("Button-01").style.right = "235px";
+
+                document.getElementById("Button-01").src = "Button-01.png";
+            }
+            
+            /*if (document.getElementById("mySideNav").style.display == "none")
+            {
+                document.getElementById("Button-01").style.right = "235px";
+            }
+            else
+            {
+                document.getElementById("Button-01").style.right = "15px";
+            } */
+        }
+    
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+        document.getElementById("mySideNav").style.width = "0";
+        document.getElementById("Button-02").style.visibility = "hidden";
+
+    }
+       
+       /* function myFunction() {
+            var x = document.getElementById("mySideNav");
+            if (x.className === "sidenav") {
+                x.className += " responsive";
+            } else {
+                x.className = "sidenav";
+            }
+        } */
+    
+        /*function nav_open() {
+            var img = document.createElement('img');
+            img.src = "Button-01.png";
+            //document.body.appendChild(img);
+            //document.getElementById("myTopNav")
+            
+        }
+    
+        function nav_close() {
+        
+        } */
+    </script>
+    
+
+    
+</body>
+</html>

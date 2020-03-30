@@ -1,0 +1,63 @@
+<!-- Brianna Mcgovern Lab 1 COEN 163L -->
+<!-- HTML lab1.html -->
+
+<!--
+ For this lab, I broke the HTML page into head and body.
+ In the head is the title and link to the CSS sheet.
+ In the body is the content of the page, including the header, footer,
+ nav, aside, and sections.
+ In order to properly style the page, I used CSS class and id selectors
+ to select the part of the HTML page I wanted to style.
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="lab1style.css">
+    <title>Lab 1</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="Logo.png" alt="Lab 1">
+    </header>
+        
+    <nav class="topnav">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#news">NEWS</a>
+    </nav>
+    
+    <div class="topimg">
+        <img id="top" src="Photo-01.jpg" alt="Photo 1">
+    </div>
+    
+    <div class="row">
+        <section class="column">
+            <img id="bottomleft" src="Photo-02.jpg" alt="Photo 2">
+            <h1>Title Head</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </section>
+        
+        <section class="column">
+            <img id="bottomright" src="Photo-03.jpg" alt="Photo 3">
+            <h1>Title Head</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+        </section>
+        
+        <aside class="column" id="sidebar">
+            <h1 align=center>Side Bar</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat, duis autem vel.Lorem ipsum dolor sit amet. <p>
+            <p>Lorem ipsumonsectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat, duis autem.</p>
+        </aside>
+    </div>
+    
+    <footer>
+        <a href="#home">HOME</a> |
+        <a href="#about">ABOUT</a> |
+        <a href="#work">WORK</a> |
+        <a href="#news">NEWS</a>
+    </footer>
+    
+</body>
+</html>
